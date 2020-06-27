@@ -101,16 +101,7 @@ body {
 }
 
 #header-page-main {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: right;
-  align-items: center;
-  align-content: center;
-}
-
-#header-page-main>div {
-  margin: 10px;
-  cursor: pointer;
+  padding: 0.3em;
 }
 
 #page-main-contant {
@@ -131,6 +122,7 @@ body {
   box-shadow: inset 1px 0 0 #dfdfdf;
   transform: translate3d(0, 0, 0);
 }
+
 .pnl-show-contant {
   position: fixed;
   z-index: 599;
@@ -163,7 +155,7 @@ body {
   margin-bottom: auto;
 }
 
-ul{
+ul {
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -227,151 +219,9 @@ ul{
   color: #2e2e2e;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 0 4px;
+.description {
+  text-align: justify;
 }
-.shape{
-  text-align: right;
-position: relative;
-    vertical-align: top;
-    display: inline-block;
-    -webkit-perspective: 2000px;
-    perspective: 2000px;
-    -webkit-transition: left .6s ease-in-out,width .6s ease-in-out,height .6s ease-in-out,-webkit-transform .6s ease-in-out;
-    transition: left .6s ease-in-out,width .6s ease-in-out,height .6s ease-in-out,-webkit-transform .6s ease-in-out;
-    transition: transform .6s ease-in-out,left .6s ease-in-out,width .6s ease-in-out,height .6s ease-in-out;
-    transition: transform .6s ease-in-out,left .6s ease-in-out,width .6s ease-in-out,height .6s ease-in-out,-webkit-transform .6s ease-in-out;
-}
-.card{
-  max-width: 100%;
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 100%;
-    min-height: 0;
-    background: #fff;
-    padding: 0;
-    border: none;
-    border-radius: 0;
-    -webkit-box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
-    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
-    -webkit-transition: -webkit-box-shadow .1s ease,-webkit-transform .1s ease;
-    transition: -webkit-box-shadow .1s ease,-webkit-transform .1s ease;
-    transition: box-shadow .1s ease,transform .1s ease;
-    transition: box-shadow .1s ease,transform .1s ease,-webkit-box-shadow .1s ease,-webkit-transform .1s ease;
-}
-/* .sides{
-  webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-} */
-.side{
-  display: block;
-  opacity: 1;
-    width: 100%;
-    margin: 0!important;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-.ui.card>.content, .ui.cards>.card>.content {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    border: none;
-    border-top: 1px solid rgba(34,36,38,.1);
-    background: 0 0;
-    margin: 0;
-    padding: 0.5em;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    font-size: 1em;
-    border-radius: 0;
-}
-.ui.card>.image>img, .ui.cards>.card>.image>img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: inherit;
-}
-.ui.card>.content>.header, .ui.cards>.card>.content>.header {
-    display: block;
-    margin: '';
-    color: rgba(0,0,0,.85);
-}
-.ui.card .meta, .ui.cards>.card .meta {
-      margin-top: 0.5em;
-    font-size: 1em;
-    color: rgba(0,0,0,.4);
-}
-.ui.card>.content>.header+.description, .ui.card>.content>.meta+.description, .ui.cards>.card>.content>.header+.description, .ui.cards>.card>.content>.meta+.description {
-    margin-top: .5em;
-    text-align: justify;
-}
-.ui.card>.content>.description, .ui.cards>.card>.content>.description {
-    clear: both;
-    color: rgba(0,0,0,.68);
-}
-.ui.card>.extra, .ui.cards>.card>.extra {
-    max-width: 100%;
-    min-height: 0!important;
-    -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-    border-top: 1px solid rgba(0,0,0,.05)!important;
-    position: static;
-    background: 0 0;
-    width: auto;
-    margin: 0 0;
-    padding: .75em 1em;
-    top: 0;
-    left: 0;
-    color: rgba(0,0,0,.4);
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    -webkit-transition: color .1s ease;
-    transition: color .1s ease;
-}
-.ui.card [class*="right floated"], .ui.cards>.card [class*="right floated"] {
-    float: right;
-}
-.ui.card [class*="left floated"], .ui.cards>.card [class*="left floated"] {
-    float: left;
-}
-.ui.card .avatar img, .ui.card img.avatar, .ui.cards>.card .avatar img, .ui.cards>.card img.avatar {
-    width: 2em;
-    height: 2em;
-    border-radius: 500rem;
-}
-.ui.card .content img, .ui.cards>.card .content img {
-    display: inline-block;
-    vertical-align: middle;
-    width: '';
-}
-.ui.avatar.image, .ui.avatar.image img, .ui.avatar.image svg, .ui.avatar.images .image, .ui.avatar.images img, .ui.avatar.images svg {
-    margin-right: .25em;
-    display: inline-block;
-    width: 2em;
-    height: 2em;
-    border-radius: 500rem;
-}
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
-/* 
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-} */
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media (max-width: 800px) {
