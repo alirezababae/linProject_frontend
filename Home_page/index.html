@@ -3,220 +3,301 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <title>Home || LinProject</title>
-        <link rel="stylesheet" type="text/css" href="css/semantic.css" />
-        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/vanilla-semantic-ui@0.0.1/dist/vanilla-semantic.min.css"> -->
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="css/semantic.css" rel="stylesheet" type="text/css" />
+        <!-- <link rel="stylesheet" type="text/css" href="css/vanilla-semantic.css"> -->
+        <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
+        <div class="ui left vertical menu sidebar">
+            <a class="item">
+                Item 1
+            </a>
+            <a class="item">
+                Item 2
+            </a>
+            <a class="item">
+                Item 3
+            </a>
+        </div>
+        <div class="pusher">
+            Your site's actual content
+        </div>
         <!-- بخش هدر -->
-        <header class="header">
-            <!-- موارد داخلی اش در بعد از ثبت نام تغییر می کند. -->
-            <div id="header-page-main">
-                <div class="ui aligned grid" style="text-align: center;">
-                    <div class="row">
-                        <div class="one wide column" style="padding: 0.3em 2em 0 0;text-align: right;">
-                            <i class="big earlybirds icon"></i>
-                        </div>
-                        <div class="one wide column">
-                            <button class="ui icon button">
+        <header class="header-top-page">
+            <div class="ui right aligned grid" style="width: 100%;margin-left: auto;margin-right: auto;">
+                <div class="center aligned two column row" style="padding: 0;">
+                    <div class="column" style="padding: 0;">
+                        <div class="ui basic segment" style="padding-left: 0;padding-right: 0;">
+                            <button class="ui icon button" id="btn-menu-drawer">
                                 <i class="bars icon"></i>
                             </button>
+                            <button class="ui icon button" id="btn-1">
+                                <i class="balance scale icon"></i>
+                            </button>
+                            <button class="ui primary button" id="btn-register">ثبت نام</button>
+                            <button class="ui button" id="btn-Log-in">ورود</button>
+                            <button class="ui icon button pink" id="btn-2">
+                                <i class="bullhorn icon"></i>
+                            </button>
                         </div>
-                        <div class="six wide column center aligned">
-                            <div class="ui icon input" style="width: 100%;">
-                                <input type="text" placeholder="جستجو" value="">
+                    </div>
+                    <div class="column" style="text-align: left;padding: 0;">
+                        <div class="ui basic segment" style="padding-left: 0;padding-right: 0;">
+                            <div class="ui icon input" style="margin-left: 1%;">
+                                <input placeholder="جستجو" type="text" value="">
                                 <i class="search icon"></i>
                             </div>
-                        </div>
-                        <div class="two wide column">
-                            <div class="item">
-                                <div class="ui primary button">ثبت نام</div>
-                            </div>
-                        </div>
-                        <div class="one wide column">
-                            <div class="item">
-                                <div class="ui button">ورود</div>
-                            </div>
+                            <span id="dL-Logo" style="cursor: pointer;">
+                                DimLight
+                                <i class="big earlybirds icon"></i>
+                            </span>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- این بخش در دستگاه موبایل قابل مشاهده است -->
-            <div style="display: none;visibility: hidden;">
-                <!-- این دکمه فقط یک آیکون منو است بدون نوشته که در سمت چپ پنل هدر قرار دارد -->
-                <div>
-                    <a>منو</a>
-                </div>
-                <!-- پنل سمت چپ بصورت فشرده در این قسمت قرار میگیرد و هر چه در قسمت پنل سمت چپ دسکتاپ قرار میگیرد در این قسمت نیز برای موبایل قابل مشاهده است. -->
-                <!-- فقط آیکون -->
-                <div>
-                    <!-- مواردی که کاربر اضافه می کند -->
-                    <div>
-                        <div>h</div>
-                    </div>
-                    <div>ویرایش</div>
                 </div>
             </div>
         </header>
         <!-- بخش محتوا  -->
-        <section id="page-main-contant">
+        <section id="page-main-constant">
             <!-- پنل سمت راست قابل مشاهده در تبلت و دسکتاپ -->
             <div class="nav-sidebar">
                 <div class="nav-sidebar-inner-scroll">
+
                     <ul class="sidebar-top-level-items">
-                        <li>
-                            <a href="#">
-                                <div class="nav-icon-container">
+                        <li style="background-color: #CDDC39;">
+                            <a>
+                                <button class="ui icon button">
                                     <i class="retweet icon"></i>
+                                </button>
+                                <span style="margin-right: 1em;width: 100%;text-align: right;">ویرایش</span>
+                                <div class="ui teal left pointing label" style="margin-left: 0;margin-right: 0.6666em;">
+                                    1
                                 </div>
-                                <span>ویرایش</span>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <a class="toggle-sidebar-button" title="نوار کناری را تغییر دهید">
-                    <i class="angle double right icon"></i>
-                    <div class="nav-icon-container">
-                    </div>
+                    <button class="ui icon button">
+                        <i class="angle double right icon"></i>
+                    </button>
                     <span class="collapse-text">بسته شود</span>
                 </a>
             </div>
             <!-- پنل نمایش ویدیو های ضبط شده -->
-            <div class="pnl-show-contant">
+            <div class="pol-show-constant">
                 <div class="nav-sidebar-inner-scroll">
                     <!--  -->
                     <div class="ui basic segment">
                         <h3 class="ui top attached header" style="text-align: right;">نام گروه بندی</h3>
                         <div class="ui attached segment">
-                            <!-- Grid -->
-                            <div class="ui grid container">
-                                <div class="five wide column">
-                                    <div class="ui people shape" style="text-align: right;">
-                                        <div class="sides">
-                                            <div class="active side">
-                                                <div class="ui olive card">
-                                                    <div class="content" style="padding-bottom: 0;">
-                                                        <div class="left floated meta" style="margin-top: 0.5em;">14h
-                                                        </div>
-                                                        <img class="ui right floated avatar image"
-                                                            src="https://semantic-ui.com/images/avatar/large/elliot.jpg">
-                                                        <div style="margin-top: 0.3em;margin-right: 2.4em;">الیوت
-                                                        </div>
-                                                    </div>
-                                                    <div class="image">
-                                                        <img
-                                                            src="https://semantic-ui.com/images/avatar/large/steve.jpg">
-                                                    </div>
-                                                    <div class="content">
-                                                        <div class="header" style="display: inline-block;">زندگی استیو
-                                                            جابز</div>
-                                                        <div class="meta"
-                                                            style="display: inline-block;left: 10px;position: absolute">
-                                                            <a>16:23</a>
-                                                            <i class="clock outline icon"></i>
-                                                        </div>
-                                                        <div class="description">
-                                                            استیون پال جابز (به انگلیسی: Steven Paul Jobs) (زادهٔ ۲۴
-                                                            فوریهٔ
-                                                            ۱۹۵۵ در سان‌فرانسیسکو – درگذشتهٔ ۵ اکتبر ۲۰۱۱ در پالو
-                                                            آلتو)[۲]
-                                                            کارآفرین، مخترع، بنیان‌گذار و مدیر ارشد اجرایی شرکت
-                                                            رایانه‌ای
-                                                            اپل و یکی از چهره‌های پیشرو در صنعت رایانه بود.
-                                                        </div>
-                                                    </div>
-                                                    <div class="extra content">
-                                                        <span class="left floated thumbs up" style="cursor: pointer;">
-                                                            <i class="thumbs up icon"></i>
-                                                        </span>
-                                                        <span class="right floated share alternate"
-                                                            style="cursor: pointer;">
-                                                            <i class="share alternate icon"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="side" style="display: none;visibility: hidden;">
-                                                <div class="ui card">
-                                                    <!-- اگر کامندی وجود داشته باشد در این قسمت نمایش می دهد -->
-                                                </div>
-                                            </div>
+                            <!-- cards -->
+                            <div class="ui link cards">
+                                <div class="ui olive card">
+                                    <div class="content" style="padding-bottom: 0;">
+                                        <div class="left floated meta" style="margin-top: 0.5em;">14h
+                                        </div>
+                                        <img class="ui right floated avatar image"
+                                            src="https://semantic-ui.com/images/avatar/large/elliot.jpg" alt="avatar">
+                                        <div style="margin-top: 0.3em;margin-right: 2.4em;">الیوت
                                         </div>
                                     </div>
-                                </div>
-                                <div class="five wide column">
-                                    <div class="ui people shape" style="text-align: right;">
-                                        <div class="sides">
-                                            <div class="active side">
-                                                <div class="ui orange card">
-                                                    <div class="content" style="padding-bottom: 0;">
-                                                        <div class="left floated meta" style="margin-top: 0.5em;">14h
-                                                        </div>
-                                                        <img class="ui right floated avatar image"
-                                                            src="https://semantic-ui.com/images/avatar/large/elliot.jpg">
-                                                        <div style="margin-top: 0.3em;margin-right: 2.4em;">الیوت
-                                                        </div>
-                                                    </div>
-                                                    <div class="image">
-                                                        <img
-                                                            src="https://semantic-ui.com/images/avatar/large/steve.jpg">
-                                                    </div>
-                                                    <div class="content">
-                                                        <div class="header" style="display: inline-block;">زندگی استیو
-                                                            جابز</div>
-                                                        <div class="meta"
-                                                            style="display: inline-block;left: 10px;position: absolute">
-                                                            <a>16:23</a>
-                                                            <i class="clock outline icon"></i>
-                                                        </div>
-                                                        <div class="description">
-                                                            استیون پال جابز (به انگلیسی: Steven Paul Jobs) (زادهٔ ۲۴
-                                                            فوریهٔ
-                                                            ۱۹۵۵ در سان‌فرانسیسکو – درگذشتهٔ ۵ اکتبر ۲۰۱۱ در پالو
-                                                            آلتو)[۲]
-                                                            کارآفرین، مخترع، بنیان‌گذار و مدیر ارشد اجرایی شرکت
-                                                            رایانه‌ای
-                                                            اپل و یکی از چهره‌های پیشرو در صنعت رایانه بود.
-                                                        </div>
-                                                    </div>
-                                                    <div class="extra content">
-                                                        <span class="left floated thumbs up" style="cursor: pointer;">
-                                                            <i class="thumbs up icon"></i>
-                                                        </span>
-                                                        <span class="right floated share alternate"
-                                                            style="cursor: pointer;">
-                                                            <i class="share alternate icon"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="side" style="display: none;visibility: hidden;">
-                                                <div class="ui card">
-                                                    <!-- اگر کامندی وجود داشته باشد در این قسمت نمایش می دهد -->
-                                                </div>
-                                            </div>
+                                    <div class="image">
+                                        <img src="https://semantic-ui.com/images/avatar/large/steve.jpg" alt="avatar">
+                                    </div>
+                                    <div class="content">
+                                        <div class="header" style="display: inline-block;">زندگی استیو
+                                            جابز
                                         </div>
+                                        <div class="meta" style="display: inline-block;left: 10px;position: absolute">
+                                            <a>16:23</a>
+                                            <i class="clock outline icon"></i>
+                                        </div>
+                                        <div class="description" style="min-height: 9em;">
+                                            استیون پال جابز (به انگلیسی: Steven Paul Jobs) (زادهٔ ۲۴
+                                            فوریهٔ
+                                            ۱۹۵۵ در سان‌فرانسیسکو – درگذشتهٔ ۵ اکتبر ۲۰۱۱ در پالو
+                                            آلتو)[۲]
+                                            کارآفرین، مخترع، بنیان‌گذار و مدیر ارشد اجرایی شرکت
+                                            رایانه‌ای
+                                            اپل و یکی از چهره‌های پیشرو در صنعت رایانه بود.
+                                        </div>
+                                    </div>
+                                    <div class="extra content">
+                                        <span class="left floated thumbs up" style="cursor: pointer;">
+                                            <i class="large thumbs up icon"></i>
+                                        </span>
+                                        <span class="left floated comment outline"
+                                            style="cursor: pointer;margin-left: 38%;">
+                                            <i class="large comment outline icon"></i>
+                                        </span>
+                                        <span class="right floated share alternate" style="cursor: pointer;">
+                                            <i class="large share alternate icon"></i>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div style="position: relative;">
-                    <button class="ui teal circular icon button"
-                        style="position: fixed;left: 2em;bottom: 2em;box-shadow: 0 1px 5px black;">
-                        <i class="icon settings"></i>
-                    </button>
-                </div>
+            </div>
+            <div style="position: relative;">
+                <button class="ui large teal circular icon button"
+                    style="position: fixed;left: 2em;bottom: 2em;box-shadow: 0 1px 5px black;">
+                    <i class="large icon settings"></i>
+                </button>
+            </div>
             </div>
         </section>
-        <!-- <script src="js/jquery.js"></script> -->
-        <script src="https://cdn.jsdelivr.net/npm/vanilla-semantic-ui@0.0.1/dist/vanilla-semantic.min.js"></script>
+        <!-- modal -->
+        <div class="ui modal">
+            <i class="close icon"></i>
+            <div class="header" style="padding-right: 2.5em !important;text-align: right;">
+                زندگی استیو جابز
+            </div>
+            <div class="scrolling image content">
+                <div class="ui medium image" style="margin-left: 0.5em;">
+                    <img src="https://semantic-ui.com/images/avatar/large/steve.jpg" alt="avatar">
+                </div>
+                <div class="description">
+                    <div class="ui feed">
+                        <div class="event">
+                            <div class="label">
+                                <img src="https://semantic-ui.com/images/avatar/small/elliot.jpg" alt="avatar">
+                            </div>
+                            <div class="content">
+                                <div class="summary">
+                                    <a class="user">
+                                        علی رستم زادهٔ
+                                    </a> شما را به عنوان دوست اضافه کرد
+                                    <div class="date">
+                                        1 ساعت پیش
+                                    </div>
+                                </div>
+                                <div class="meta">
+                                    <a class="like">
+                                        <i class="like icon"></i> 4 Likes
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="label">
+                                <img src="https://semantic-ui.com/images/avatar/small/helen.jpg" alt="avatar">
+                            </div>
+                            <div class="content">
+                                <div class="summary">
+                                    <a>تهمینه خانم</a> اضافه <a>2 مورد جدید
+                                        تصاویر</a>
+                                    <div class="date">
+                                        4 روز پیش
+                                    </div>
+                                </div>
+                                <div class="extra images">
+                                    <a><img src="https://semantic-ui.com/images/wireframe/image.png" alt="avatar"></a>
+                                    <a><img src="https://semantic-ui.com/images/wireframe/image.png" alt="img"></a>
+                                </div>
+                                <div class="meta">
+                                    <a class="like">
+                                        <i class="like icon"></i> 1 Like
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="label">
+                                <img src="https://semantic-ui.com/images/avatar/small/jenny.jpg" alt="img">
+                            </div>
+                            <div class="content">
+                                <div class="summary">
+                                    <a class="user">
+                                        آریانا
+                                    </a> شما را به عنوان دوست اضافه کرد
+                                    <div class="date">
+                                        4 روز پیش
+                                    </div>
+                                </div>
+                                <div class="meta">
+                                    <a class="like">
+                                        <i class="like icon"></i> 8 Likes
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="label">
+                                <img src="https://semantic-ui.com/images/avatar/small/joe.jpg" alt="img">
+                            </div>
+                            <div class="content">
+                                <div class="summary">
+                                    <a>مهبد</a> از استاد تشکر کرد
+                                    <div class="date">
+                                        5 روز پیش
+                                    </div>
+                                </div>
+                                <div class="extra text">
+                                    ما زندگی دوباره ای را پشت سر می گذاریم. ما
+                                    همیشه در حال بازگشت به جایی هستیم که شروع
+                                    کرده ایم و دوباره همه چیز را شروع می کنیم.
+                                    حتی اگر آن روز دورهای بیش از حد را اجرا
+                                    نکنیم ، مطمئناً به زودی به همان روز دیگر
+                                    برمی گردیم.
+                                </div>
+                                <div class="meta">
+                                    <a class="like">
+                                        <i class="like icon"></i> 5 Likes
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="label">
+                                <img src="https://semantic-ui.com/images/avatar/small/justen.jpg" alt="img">
+                            </div>
+                            <div class="content">
+                                <div class="summary">
+                                    <a>Justen Kitsune</a> added <a>2 new
+                                        photos</a> of you
+                                    <div class="date">
+                                        4 days ago
+                                    </div>
+                                </div>
+                                <div class="extra images">
+                                    <a><img src="https://semantic-ui.com/images/wireframe/image.png" alt="avatar"></a>
+                                    <a><img src="https://semantic-ui.com/images/wireframe/image.png" alt="avatar"></a>
+                                </div>
+                                <div class="meta">
+                                    <a class="like">
+                                        <i class="like icon"></i> 41 Likes
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui form">
+                    <div class="inline fields" style="-ms-flex-wrap: wrap;flex-wrap: nowrap;">
+                        <div class="field" style="width: 100%;">
+                            <textarea rows="2" style="text-align: justify;"></textarea>
+                        </div>
+                        <div class="field">
+                            <button class="ui icon button">
+                                <i class="large paper plane outline icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/semantic.js "></script>
+        <!-- <script src="js/vanilla-semantic.js"></script> -->
         <script src="js/app.js "></script>
-        <!-- <script src="js/semantic.js "></script> -->
+
     </body>
 
 </html>
