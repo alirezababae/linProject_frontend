@@ -48,16 +48,27 @@
   font-weight: 100;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 html {
   height: 100%;
 }
 
-body {
+*,
+.ui.header,
+button,
+input,
+optgroup,
+select,
+textarea,
+.ui.input>input,
+.ui.cards>.card>.content>.header,
+.ui.card>.content>.header,
+.ui.primary.button,
+.ui.button,
+.button {
   font-family: Vazir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, "Noto Sans", Ubuntu, Cantarell, "Fira Sans", "Droid Sans", Helvetica, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Hiragino Kaku Gothic Pro", Meiryo;
+}
+
+body {
   direction: rtl;
   text-align: right;
   padding: 0 !important;
@@ -68,43 +79,27 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #2e2e2e;
-  text-align: left;
   background-color: #fff;
 }
 
 .header-top-page {
-  background-color: #292961;
-  padding: 0 16px;
-  z-index: 1000;
-  margin-bottom: 0;
-  min-height: 40px;
-  border: 0;
-  border-bottom-color: currentcolor;
-  border-bottom-style: none;
-  border-bottom-width: 0px;
-  border-bottom: 1px solid #dfdfdf;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  border-radius: 0;
+  z-index: 1000;
+  min-height: 40px;
+  background-color: #292961;
 
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  border-bottom: 1px solid #dfdfdf;
+
+  border-radius: 0;
   padding: 0.25rem 0.5rem;
 
   color: white;
 }
 
-#header-page-main {
-  padding: 0.3em;
-}
-
-#page-main-contant {
+#page-main-constant {
   padding-right: 220px;
   transition: padding-right 0.3s;
 }
@@ -123,7 +118,7 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
-.pnl-show-contant {
+.pol-show-constant {
   position: fixed;
   z-index: 599;
   top: 3.3em;
@@ -141,7 +136,6 @@ body {
 .nav-sidebar-inner-scroll {
   height: 100%;
   width: 100%;
-  overflow: auto;
   overflow-y: auto;
 }
 
@@ -171,12 +165,9 @@ ul {
   position: fixed;
   height: 48px;
   bottom: 0;
-  padding: 0 16px;
+  padding: 0 5px;
   background-color: #fafafa;
-  border: 0;
-  border-top-color: currentcolor;
-  border-top-style: none;
-  border-top-width: 0px;
+
   border-top: 1px solid #dfdfdf;
   color: #707070;
   display: flex;
@@ -186,6 +177,7 @@ ul {
 .collapse-text {
   white-space: nowrap;
   overflow: hidden;
+  margin-right: 1em;
 }
 
 .nav-icon-container {
@@ -201,8 +193,9 @@ ul {
   transition: padding 0.3s;
   display: flex;
   align-items: center;
-  padding: 12px 16px;
+  padding: 0 5px;
   color: #707070;
+  height: 48px;
 }
 
 .nav-sidebar li .nav-item-name {
@@ -214,27 +207,153 @@ ul {
 }
 
 .toggle-sidebar-button:hover,
-.close-nav-button:hover {
-  background-color: #dfdfdf;
-  color: #2e2e2e;
+.close-nav-button:hover,
+.nav-sidebar li:hover {
+  background-color: #dfdfdf !important;
+  color: #2e2e2e !important;
 }
 
 .description {
   text-align: justify;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
+.ui[class*="left pointing"].label:before {
+  left: 2.27em;
+}
+
+/* For desktop: */
+@media only screen and (min-width: 900px) {
+  .nav-sidebar {
+    width: 220px;
+  }
+
+  .pol-show-constant {
+    width: calc(100% - 220px);
+    right: 220px;
+  }
+
+  #page-main-constant {
+    padding-right: 220px;
+  }
+
+  .toggle-sidebar-button {
+    width: 219px;
+  }
+
+  #dL-Logo,
+  #btn-1,
+  #btn-2,
+  #btn-Log-in,
+  #btn-register {
+    display: inline-block;
+  }
+
+  #btn-menu-drawer {
+    display: none;
+  }
+
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 480px) {
+  .nav-sidebar {
+    width: 0 !important;
+  }
+
+  .pol-show-constant {
+    width: 100% !important;
+    right: 0 !important;
+  }
+
+  #page-main-constant {
+    padding-right: 0 !important;
+  }
+
+  .toggle-sidebar-button {
+    width: 0 !important;
+  }
+
+  .ui.grid>[class*="two column"].row>.column {
+    width: 25% !important;
+  }
+
+  #dL-Logo,
+  #btn-1,
+  #btn-2,
+  #btn-Log-in,
+  #btn-register {
+    display: none;
+  }
+
+  #btn-menu-drawer {
+    display: inline-block;
+  }
+
+  .card {
+    width: 100% !important;
+  }
+
+  .center.aligned.two.column.row>.column:last-child {
+    width: 75% !important;
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
+/* For tablets: */
+@media only screen and (min-width: 481px) and (max-width: 900px) {
+  .nav-sidebar {
+    width: 54px;
   }
+
+  .pol-show-constant {
+    width: calc(100% - 54px);
+    right: 54px;
+  }
+
+  #page-main-constant {
+    padding-right: 54px;
+  }
+
+  .toggle-sidebar-button {
+    width: 53px;
+  }
+
+  #dL-Logo {
+    display: inline-block;
+  }
+
+  #btn-1,
+  #btn-2,
+  #btn-Log-in,
+  #btn-register {
+    display: none;
+  }
+
+  #btn-menu-drawer {
+    display: inline-block;
+  }
+
+  .card {
+    width: 100% !important;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+  #dL-Logo {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .card {
+    width: 100% !important;
+  }
+}
+
+.extra.text,
+.summary,
+.like,
+.extra.images,
+.label {
+  text-align: justify;
 }
