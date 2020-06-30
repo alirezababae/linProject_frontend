@@ -1,2 +1,2 @@
-# linProject_frontend
-# Creating a social network with educational focus
+# DimLight
+Creating a social network with educational focus
